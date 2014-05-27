@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-# Ignore all sublime files
-/dsw.sublime*
+#Ignore all png files
+/*.png
