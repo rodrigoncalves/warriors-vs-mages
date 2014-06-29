@@ -3,6 +3,16 @@ source 'https://rubygems.org'
 
 gem 'i18n'
 gem 'devise'
+gem 'high_voltage', '~> 2.2.0'
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
+
+gem 'jquery-datatables-rails'
+
+gem 'jquery-ui-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
