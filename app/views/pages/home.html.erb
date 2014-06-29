@@ -1,0 +1,28 @@
+<!--  Carousel - consult the Twitter Bootstrap docs at
+      http://twitter.github.com/bootstrap/javascript.html#carousel -->
+<div id="this-carousel-id" class="carousel slide" align="center"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+    <div class="item active"><!-- class of active since it's the first item -->
+      <img src="<%= asset_path( 'Cross_Warrior.jpg' ) %>" alt="" width = "1200"/>
+      <div class="carousel-caption">
+        <p>Bem Vindo ao Warriors Vs Mages, um jogo baseado em RPG de Navegador</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="<%= asset_path( 'sorcerer.jpg' ) %>" alt="" width = "1200" />
+      <div class="carousel-caption">
+        <p>Crie sua conta agora e comece a jogar com seus amigos</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="<%= asset_path( 'vs.jpg' ) %>" alt="" width = "1200"/>
+      <div class="carousel-caption">
+        <p>Faça missões, duele com seus amigos e ganhe recompensas</p>
+      </div>
+    </div>
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+        href values must reference the id for this carousel -->
+    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
