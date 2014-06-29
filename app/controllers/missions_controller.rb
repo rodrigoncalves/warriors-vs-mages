@@ -62,13 +62,13 @@ class MissionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_mission
-      @mission = Mission.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_mission
+    @mission = Mission.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def mission_params
-      params.require(:mission).permit(:description, :reward, :duration)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def mission_params
+    params.require(:mission).permit(:description, :reward, :duration,:user_id)
+  end
 end
