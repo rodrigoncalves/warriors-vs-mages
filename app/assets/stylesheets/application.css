@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+.bg {
+  background: url('background.jpg') no-repeat center center;
+  position: fixed;
+  width: 100%;
+  height: 100%; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  height: 400px;
+}
+
+.form-divs {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.strong{
+  font-weight: bold;
+}
+.margin{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.clearfix{
+  height: 50px;
+}
+.center{
+text-align: center;
+}
+
+.white_cont{
+  background-color: white;
+  margin: 2px;
+  width:  auto;
+  color: #868686;
+  text-align: center;
+}

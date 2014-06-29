@@ -1,5 +1,19 @@
 <%= form_for(@mission) do |f| %>
+<<<<<<< HEAD
   
+=======
+  <% if @mission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mission.errors.count, "error") %> prohibited this mission from being saved:</h2>
+
+      <ul>
+      <% @mission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+>>>>>>> master
 
   <div class="field">
     <%= f.label :description %><br>
@@ -11,15 +25,22 @@
   </div>
   <div class="field">
     <%= f.label :duration %><br>
+<<<<<<< HEAD
     <%= f.datetime_select :duration,{:order => [:day, :month, :year], :datetime_separator => " at "}  %>
   </div>
 
   <div class="field">
     <%= f.hidden_field :user_id, :value => current_user.id  %>
+=======
+    <%= f.date_select :duration %>
+>>>>>>> master
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 <% end %>
