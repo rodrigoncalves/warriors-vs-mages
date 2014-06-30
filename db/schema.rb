@@ -14,15 +14,12 @@
 ActiveRecord::Schema.define(version: 20140629175902) do
 
   create_table "missions", force: true do |t|
-    t.integer  "user_id"
     t.string   "description"
     t.string   "reward"
     t.date     "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "missions", ["user_id"], name: "index_missions_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

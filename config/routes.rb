@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :characters
+
   resources :missions
 
   devise_for :users

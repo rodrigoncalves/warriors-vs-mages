@@ -25,5 +25,20 @@
   <%= @character.hp %>
 </p>
 
+<p>
+  <strong>Armor:</strong>
+  <%= @character.armor %>
+</p>
+
+<p>
+  <strong>Attackspeed:</strong>
+  <%= @character.attackspeed %>
+</p>
+
+<p>
+  <strong>Damage:</strong>
+  <%= @character.damage %>
+</p>
+
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>
