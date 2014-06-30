@@ -1,29 +1,35 @@
-<h1>Listing missions</h1>
+<div class="container">
+<div class="panel panel-default"%>
+      <div class="page-header center">
+         <h1>Quests</h1>
+      </div>
+          <div class="panel-body">
+              <div class="pull-right">
+              <%= link_to 'New Mission', new_mission_path, :class => 'glyphicon glyphicon-pencil btn btn-success' %>
+              </div>
+          </div>
+        <table class= "table table-striped display" id="quests">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Reward</th>
+              <th>Duration</th>
+              <th>Editar</th>
+              <th>Deletar</th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Reward</th>
-      <th>Duration</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @missions.each do |mission| %>
-      <tr>
-        <td><%= mission.description %></td>
-        <td><%= mission.reward %></td>
-        <td><%= mission.duration %></td>
-        <td><%= link_to 'Show', mission %></td>
-        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Mission', new_mission_path %>
+          <tbody>
+            <% @missions.each do |mission| %>
+              <tr>
+                <td><%= mission.description %></td>
+                <td><%= mission.reward %></td>
+                <td><%= mission.duration %></td>
+                <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
+                <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      </div>

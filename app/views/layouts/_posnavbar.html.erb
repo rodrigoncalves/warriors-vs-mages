@@ -1,25 +1,23 @@
-<div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="<%= root_path%>" >Warriors VS Mages</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Missões",  "/"%></li>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Warriors VS Mages</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+         <li><%= link_to "Missões",  missions_path%></li>
               <li><%= link_to "Batalhas", "/"  %></li>
               <li><%= link_to "Loja", "/"  %></li>
              </ul>
              <div class="pull-right">
-             	 <button type="button" class="btn btn-info navbar-btn"><i class="fa fa-gear"></i>
+               <button type="button" class="btn btn-info navbar-btn"><i class="fa fa-gear"></i>
               <%= current_user.email%>
               </button>
-          		<%= link_to "Sair", destroy_user_session_path, :method => :delete, :class => 'btn btn-lg  btn-danger ' %>
+              <%= link_to "Sair", destroy_user_session_path, :method => :delete, :class => 'btn btn-danger navbar-btn' %>
           </div>
-          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
