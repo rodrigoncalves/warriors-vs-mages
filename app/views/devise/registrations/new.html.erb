@@ -1,18 +1,24 @@
-<h2>Sign up</h2>
+<div class="form-divs">
+<div class="border-form-div" align = "center">
+<h2>Cadastre-se</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name) ,:html => { :multipart => true } ) do |f| %>
+  <%= f.error_notification %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <%= f.email_field :email,:placeholder => 'Email' ,:size => 32%>
+    <%= f.password_field :password , :label => "Senha",:placeholder => 'Senha' ,:size => 32%>
+    <%= f.password_field :password_confirmation , :label => "Confirmar Senha", :placeholder => 'Confirmação de Senha' ,:size => 32%>
+    </br>
+    <%= f.button :submit , :class => 'btn btn-info btn margin' , :id => 'create-user' %>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <%= link_to raw("<i class=\"icon-white icon-remove\"> Cancelar </i>"),
+                        root_path ,
+                        class: "btn  btn-danger margin"%>
 
-  <div><%= f.submit "Sign up" %></div>
+
 <% end %>
+</div>
+</div>
 
-<%= render "devise/shared/links" %>
+
