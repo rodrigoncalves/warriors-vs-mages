@@ -7,7 +7,7 @@ class Warrior < Character
   end
 
   def hp(strength)
-  	my_hp = (strength * 4)/2
+    my_hp = (strength * 4)/2
     return my_hp
   end
 
@@ -24,5 +24,11 @@ class Warrior < Character
   def attackspeed(agility)
     my_attackspeed = agility *2
     return my_attackspeed
+  end
+
+  def warrior_habilities
+    warriorspells = WarriorSpells.new
+    warriorhabilities = warriorspell.my_spells
+    return warriorhabilities
   end
 end

@@ -1,12 +1,12 @@
 class Mage  < Character
 
   def damage(intelligence)
-    my_damage = (strength + 6)/2
+    my_damage = (intelligence + 6)/2
     return  my_damage
   end
 
   def hp(strength)
-  	my_hp = (strength * 3)/2
+    my_hp = (strength * 3)/2
     return my_hp
   end
 
@@ -23,6 +23,12 @@ class Mage  < Character
   def attackspeed(agility)
     my_attackspeed = agility * 1,5
     return my_attackspeed
+  end
+
+  def mage_spell_book
+    magespells = MageSpells.new
+    spell_book = magespells.my_spells
+    return spell_book
   end
 end
 
