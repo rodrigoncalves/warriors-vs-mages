@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :staffs
+
+  resources :weapons
+
   resources :characters
 
   resources :missions
