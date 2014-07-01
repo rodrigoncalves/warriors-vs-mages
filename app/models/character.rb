@@ -30,6 +30,4 @@ class Character < ActiveRecord::Base
   def attackspeed
     #implement in the child classes
   end
-
-
 end

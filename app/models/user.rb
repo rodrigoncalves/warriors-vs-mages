@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
   has_one   :character
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
+
+  include Observer
+
+  def  self.challenge(user)
+    @user = User.find(params[:id])
+    notification #this method comes module observer
+  end
+
 end
